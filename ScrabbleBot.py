@@ -38,7 +38,7 @@ print(""" ____                 _     _     _      ____        _
 \___ \ / __| '__/ _` | '_ \| '_ \| |/ _ \  _ \ / _ \| __|
  ___) | (__| | | (_| | |_) | |_) | |  __/ |_) | (_) | |_
 |____/ \___|_|  \__,_|_.__/|_.__/|_|\___|____/ \___/ \__|
-      
+
 
 >>>====================Scrabble!======================<<<
 
@@ -48,12 +48,13 @@ while True:
     letters = input("Give me your words: ")
     output = ''
 
+    # for loop to read the input
     for letter in letters:
         try:
             output += scrabble_dict[letter.lower()]
         except:
             output += letter
-    
+
     pyperclip.copy(output)
     print('\n\n')
     print('>>>>>===================<<<<<')
